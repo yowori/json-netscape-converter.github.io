@@ -1,0 +1,121 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #000; 
+	color: #fff; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+	scroll-behavior: smooth;
+}
+
+
+.container {
+	text-align: center;
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 120vw;
+    height: 120vh;
+    background: url('https://i.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif') center center;
+    background-size: cover;
+    filter: grayscale(100%) brightness(0.6);
+    z-index: -1;
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%) perspective(1000px);
+}
+
+
+
+h1 {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+
+.converter {
+	width: 100%;
+	display: flex;
+	flex-direction: column; 
+	align-items: center;
+}
+
+
+label {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	font-size: 1.2rem;
+	margin: 10px 0;
+	display: block;
+	opacity: 0;
+	animation: matrixText 1s forwards;
+}
+
+
+@keyframes matrixText {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+textarea {
+	width: 50%;
+	height: 200px;
+	margin: 10px 0;
+	padding: 10px;
+	background-color: #222;
+	color: #fff;
+	border: 1px solid #444;
+	border-radius: 5px;
+	font-size: 1rem;
+	text-align: left;
+	resize: none;
+	opacity: 0;
+	animation: matrixText 1s forwards;
+}
+
+
+button {
+	background-color: transparent;
+	color: white;
+	padding: 10px 20px;
+	margin: 10px 0;
+	border-color: #555;
+	border-style: dotted;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	width: 100%;
+	max-width: 621px;
+	opacity: 0;
+	animation: matrixText 1s forwards;
+}
+
+button:hover {
+	background-color: #222;
+}
+textarea::-webkit-scrollbar {
+	display: none; /* Скрываем полосу прокрутки */
+}
+
+body::-webkit-scrollbar {
+	display: none; /* Скрываем полосу прокрутки */
+}
